@@ -1,0 +1,15 @@
+{% extends 'ex/base.html' %}
+{% block title %}<title>Registration</title>{% endblock title %}
+{% block style %}{% endblock style %}
+{% block content %}
+<h1 align="center">Registration</h1>
+<div align="center">
+    <form method="post" class='form'>
+        {% csrf_token %}
+        <table>
+        {{ form.as_table }}
+        </table>
+        <input type='submit' value='Regitration'>
+    </form>
+</div>
+{% endblock content%}

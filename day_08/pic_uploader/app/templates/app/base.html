@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{% block title %}{% endblock title %}</title>
+        {% load static %}
+        <style>
+            body {
+            background-image: url("{% static 'wu.jpg' %}");
+            background-repeat:no-repeat;
+            background-size:100%;
+            }
+        </style>
+
+        {% load bootstrap3 %}
+        {% bootstrap_css %}
+    </head>
+    {% load static %}
+    <body class="bodyStyle">
+        {% block content %}{% endblock content%}
+    </body>
+
+</html>

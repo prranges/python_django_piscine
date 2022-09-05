@@ -1,0 +1,30 @@
+{% extends 'app/base.html' %}
+{% block title %}Day08{% endblock title %}
+{% load bootstrap3 %}
+{% block content %}
+<div class="container">
+    <h1>Day 08 - Upload image:</h1>
+      <div class="row">
+          {% bootstrap_messages %}
+
+          {% for image in object_list %}
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img src="{{image.image.url}}" alt="{{image.title}}"/>
+              <div class="caption">
+                <h4 >{{image.title}}</h4>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+      </div>
+    <form action="" method="post" class="form" enctype="multipart/form-data">
+        {% csrf_token %} {% bootstrap_form form %} {% buttons %}
+        <button type="submit" class="btn btn-primary">
+          {% bootstrap_icon "star" %} Submit
+        </button>
+        {% endbuttons %}
+      </form>
+</div>
+{% endblock content %}  

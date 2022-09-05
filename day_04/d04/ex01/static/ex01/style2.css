@@ -1,0 +1,18 @@
+html, body, a, p {
+    color: rgb(255, 0, 0);
+    font: 14px "Roboto Mono", sans-serif
+}
+
+
+h1, a:visited, a:hover {
+    color: red;
+}
+
+ul.list li{
+  display: inline;
+}
+
+iframe {
+    height: 100vh;
+    width: 100vw;
+}

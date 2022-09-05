@@ -1,0 +1,7 @@
+asgiref
+Django
+django-bootstrap3
+pytz
+sqlparse
+typing-extensions
+psycopg2-binary

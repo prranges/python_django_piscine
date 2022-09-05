@@ -1,0 +1,18 @@
+{% extends 'ex02/base.html' %}
+{% block title %}<title>Ex02: History Form!</title>{% endblock %}
+{% block style %}{% endblock style %}
+{% block content %}
+<h1>History log form:</h1>
+
+<form action="" method="post">
+  {% csrf_token %} {{ form.as_table }}
+  <input type="submit" value="Submit" />
+</form>
+
+<h2>Logs history:</h2>
+
+{% for history in histories reversed %}
+<p>{{ history }}</p>
+{% endfor %}
+
+{% endblock content%}

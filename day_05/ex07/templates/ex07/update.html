@@ -1,0 +1,11 @@
+{% extends 'ex07/base.html' %}
+{% block title %}<title>Update ex06</title>{% endblock title %}
+{% block content %}
+<div>
+  <h1>Update ex07</h1>
+  <form method="post" action="{{request.path}}">
+    {% csrf_token %} {{ form.as_table }}
+    <input type="submit" value="Update" />
+  </form>
+</div>
+{% endblock content%}

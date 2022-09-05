@@ -1,0 +1,11 @@
+{% extends 'ex04/base.html' %}
+{% block title %}<title>Remove ex04</title>{% endblock title %}
+{% block content %}
+<div>
+  <h1>Remove ex04</h1>
+  <form method="post" action="{{request.path}}">
+    {% csrf_token %} {{ form.as_table }}
+    <input type="submit" value="Remove" />
+  </form>
+</div>
+{% endblock content%}
